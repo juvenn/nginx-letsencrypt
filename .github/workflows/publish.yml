@@ -1,0 +1,14 @@
+name: Publish Docker Image
+
+on:
+  release:
+    types: [published]
+    
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      name: Build the Docker image
